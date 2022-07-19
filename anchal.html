@@ -322,47 +322,7 @@ document.querySelector("#container").append(boxes)
 }
 
 
-document.querySelector("#price").addEventListener("change", changes)
-function changes(){
-  let selected = document.querySelector("#price").value;
-  if(selected=="hightolow"){
-    mensData.sort(function(a,b){
-    return b.price - a.price
-    })
-    display(mensData)
-    console.log(mensData)
-  }
 
-  if(selected=="lowtohigh"){
-    mensData.sort(function(a,b){
-      return a.price - b.price
-    })
-    display(mensData)
-    console.log(mensData)
-  }
-}
-
-
-document.querySelector("#sortname").addEventListener("change", sortbyname)
-function sortbyname(){
-  let selected=document.querySelector("#sortname").value;
-  if(selected=="Ascending"){
-    mensData.sort(function (a,b){
-    if(a.name>b.name) return 1
-    if(a.name<b.name) return -1
-    return 0
-    })
-    display(mensData)
-  }
-  if(selected=="Descending"){
-    mensData.sort(function(a,b){
-    if(a.name>b.name) return -1
-    if(a.name<b.name) return 1
-    return 0
-    })
-    display(mensData)
-   }
-}
 
 
 
